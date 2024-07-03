@@ -2,7 +2,7 @@ import requests
 import base64
 
 # Load an image and convert it to base64
-with open("test/img1.jpg", "rb") as image_file:
+with open("test/img3.jpg", "rb") as image_file:
     base64_image = base64.b64encode(image_file.read()).decode('utf-8')
 
 # Prepare the request payload
