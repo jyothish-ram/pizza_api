@@ -1,0 +1,11 @@
+[Unit]
+Description=uWSGI instance to serve pizza api
+After=network.target
+[Service]
+User=socius-admin
+Group=www-data
+WorkingDirectory=/home/socius-admin/pizza_api
+Environment="PATH=/home/socius-admin/pizza_api/venv/bin"
+ExecStart=/home/socius-admin/pizza_api/venv/bin/uwsgi --ini pizza_api.ini
+[Install]
+WantedBy=multi-user.target
